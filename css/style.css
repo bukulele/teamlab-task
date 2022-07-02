@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.triangle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectElementWrapper {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.selectElement {
+  position: relative;
+  background-color: white;
+  width: 350px;
+  height: 30px;
+  z-index: 2;
+}
+
+.defaultOption {
+  border: 1px solid black;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.selectList {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  visibility: collapse;
+  opacity: 0;
+  width: 100%;
+  height: fit-content;
+  max-height: 250px;
+  border: 1px solid black;
+  border-top: none;
+  overflow-y: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+.option {
+  list-style-type: none;
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.option:last-of-type {
+  list-style-type: none;
+  width: 100%;
+  height: 30px;
+  border-bottom: none;
+}
+
+.option:hover {
+  background-color: lightgray;
+}
